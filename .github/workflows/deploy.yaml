@@ -17,12 +17,12 @@ jobs:
       - run: docker build -t rallycoding/react-test -f ./client/Dockerfile.dev ./client
       - run: docker run -e CI=true rallycoding/react-test npm test
 
-      - run: docker build -t rallycoding/multi-client ./client
-      - run: docker build -t rallycoding/multi-nginx ./nginx
-      - run: docker build -t rallycoding/multi-server ./server
-      - run: docker build -t rallycoding/multi-worker ./worker
+      - run: docker build -t piotrzrk/multi-client ./client
+      - run: docker build -t piotrzrk/multi-nginx ./nginx
+      - run: docker build -t piotrzrk/multi-server ./server
+      - run: docker build -t piotrzrk/multi-worker ./worker
 
-      - run: docker push rallycoding/multi-client
-      - run: docker push rallycoding/multi-nginx
-      - run: docker push rallycoding/multi-server
-      - run: docker push rallycoding/multi-worker
+      - run: docker push piotrzrk/multi-client
+      - run: docker push piotrzrk/multi-nginx
+      - run: docker push piotrzrk/multi-server
+      - run: docker push piotrzrk/multi-worker
